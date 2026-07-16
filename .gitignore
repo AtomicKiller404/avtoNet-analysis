@@ -219,3 +219,6 @@ __marimo__/
 
 #  Claude
 .claude
+
+# Data
+data/
