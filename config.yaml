@@ -1,0 +1,41 @@
+
+# avto.net scraper — config.yaml
+# Edit this file to change your search.
+# All values must match keys in lookup.py exactly.
+
+## What to scrape
+listing_type: prodam             # prodam / oddam
+age:          rabljeno               # novo / testno / rabljeno / vse
+
+## Brand & model — leave blank for all
+brand: 
+model:
+
+## Body type — one value only
+## vse, limuzina, kombilimuzina, karavan, enoprostorec, suv, coupe, cabrio, pickup, microcar
+body_type: vse
+
+## Price & year — leave blank for no limit
+price_min: 5000
+price_max: 10000
+year_min:
+year_max:
+
+## Engine & drivetrain
+fuel:         vse        # vse / bencin / diesel / hibrid / elektrika / lpg / cng / plin
+transmission: vse        # vse / avtomatski / rocni
+kw_min:
+kw_max:
+ccm_min:                 # engine displacement min (cm³)
+ccm_max:                 # engine displacement max (cm³)
+km_max: 150000
+
+## Seller & location
+seller:   vse            # vse / fizicna_oseba / trgovec
+location: slovenija            # vse / slovenija / tujina / ljubljana / maribor / celje / kranj / nova_gorica / koper / novo_mesto / murska_sobota
+
+## Scraper behaviour
+delay_seconds: 2
+max_pages:     5
+output_dir:    data/
+fetch_details: true     # true = fetch each listing's detail page (slower, adds 15+ fields)
